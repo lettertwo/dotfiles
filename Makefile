@@ -24,7 +24,11 @@ link.prezto.dotfiles: p.zlogin p.zlogout p.zshenv p.zshrc
 
 link.dotfiles: .gitconfig .gitignore .zprofile .zpreztorc .znocorrect .tmux.conf
 
-install: link.modules link.prompts link.prezto link.prezto.dotfiles link.dotfiles
+link.powerline:
+	mkdir -p $(HOME)/.config
+	$(LINK) $(SRC)/powerline $(HOME)/.config/powerline
+
+install: link.modules link.prompts link.prezto link.prezto.dotfiles link.dotfiles link.powerline
 
 .PHONY:
 	link.modules
@@ -32,4 +36,5 @@ install: link.modules link.prompts link.prezto link.prezto.dotfiles link.dotfile
 	link.prezto
 	link.prezto.dotfiles
 	link.dotfiles
+	link.powerline
 	install

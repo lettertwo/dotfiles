@@ -1,0 +1,18 @@
+{
+	"default_module": "powerline.segments.common",
+	"segment_data": {
+	},
+	"segments": {
+		"left": [
+			{
+				"name": "branch",
+				"status_colors": true
+			},
+			{
+				"name": "hostname"
+			}
+		],
+		"right": [
+		]
+	}
+}
